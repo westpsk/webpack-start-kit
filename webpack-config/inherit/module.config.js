@@ -1,5 +1,6 @@
 var dirVars = require('../base/dir-vars.config.js');
 var eslintFormatter = require('eslint-friendly-formatter');
+
 module.exports = {
   rules: [
     {

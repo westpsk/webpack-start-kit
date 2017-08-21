@@ -1,4 +1,5 @@
 var dirVars = require('./base/dir-vars.config.js');
+var ExtractTextPlugin = require('extract-text-webpack-plugin');
 
 const moduleConfig = require('./inherit/module.config.js');
 
@@ -8,24 +9,12 @@ const moduleConfig = require('./inherit/module.config.js');
 */
 
 moduleConfig.rules.push({
-  test: /\.less$/,
+  test: /\.css$/,
   include: dirVars.srcRootDir,
-  // loader: 'style!css?minimize&-autoprefixer!postcss!less',
-  use: [
-    {
-      loader: 'style-loader',
-    },
-    {
-      loader: 'css-loader',
-      options: {
-        minimize: true,
-        '-autoprefixer': true,
-      },
-    },
-    // {
-    //   loader: 'postcss-loader',
-    // }
-  ],
+  use: ExtractTextPlugin.extract({
+    fallback: "style-loader",
+    use: "css-loader"
+  })
 });
 
 module.exports = moduleConfig;

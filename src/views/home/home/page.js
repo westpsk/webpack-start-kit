@@ -1,5 +1,5 @@
 'use strict';
-require('./index.css');
+require('./home.css');
 $(function() {
   /**
   * this is footer js test
