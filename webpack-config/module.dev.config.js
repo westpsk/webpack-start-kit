@@ -22,9 +22,9 @@ moduleConfig.rules.push({
         '-autoprefixer': true,
       },
     },
-    {
-      loader: 'postcss-loader',
-    }
+    // {
+    //   loader: 'postcss-loader',
+    // }
   ],
 });
 
