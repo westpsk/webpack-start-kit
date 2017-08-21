@@ -20,5 +20,5 @@ npm run dev
 启动服务默认指定3000端口，页面调试时，访问相应的html链接即可 ![http://localhost:3000/src/views/mokuai/page1/](http://localhost:3000/src/views/mokuai/page1/)
 
 ```
-npm run new-dev
+npm run start
 ```

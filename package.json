@@ -8,8 +8,7 @@
     "build": "webpack --progress --colors --bail",
     "dev": "webpack -w --progress --colors --config ./webpack.dev.config.js",
     "b-watch": "browser-sync start --server --files build/css,build/js,src/views",
-    "new-dev": "npm run dev & npm run b-watch",
-    "start": "webpack-dev-server --config ./webpack.dev.config.js --open --hot",
+    "start": "npm run dev & npm run b-watch",
     "profile": "webpack --colors --profile --display-modules --config ./webpack.dev.config.js"
   },
   "keywords": [
