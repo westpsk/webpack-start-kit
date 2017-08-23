@@ -6,18 +6,10 @@ const moduleConfig = require('./inherit/module.config.js');
 moduleConfig.rules.push({
   test: /\.css$/,
   include: dirVars.srcRootDir,
-  use: ExtractTextPlugin.extract([
-    {
-      loader: 'css-loader',
-      options: {
-        minimize: true,
-        '-autoprefixer': true,
-      },
-    },
-    // {
-    //   loader: 'postcss-loader',
-    // }
-  ]),
+  use: ExtractTextPlugin.extract({
+    fallback: "style-loader",
+    use: "css-loader"
+  })
 });
 
 module.exports = moduleConfig;
