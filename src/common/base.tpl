@@ -32,14 +32,14 @@
   <![endif]--> 
 </head>
 <body>
-  {%include file='../../public-resource/components/header/index.tpl'%}
+  {%include file='../header/index.tpl'%}
   <div id="wrapper">
     <div class="wrapper-inner">
     {%block "container"%}
     {%/block%}
     </div>
   </div>
-  {%include file='../../public-resource/components/footer/index.tpl'%}
+  {%include file='../footer/index.tpl'%}
   {%block "js"%}
   {%/block%}
 </body>
