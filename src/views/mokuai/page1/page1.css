@@ -1,4 +1,5 @@
-body{
-  color: blue;
-  font-size: 22px;
+$blue: #1875e7;
+body {
+    color: $blue;
+    font-size: 22px;
 }
