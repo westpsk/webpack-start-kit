@@ -1,6 +1,6 @@
 ## readme
 
-前端脚手架。
+前端脚手架。simple
 
 ## install
 
