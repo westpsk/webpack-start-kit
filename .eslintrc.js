@@ -53,5 +53,6 @@ module.exports = {
       'LabeledStatement',
       'WithStatement',
     ]
-  }
+  },
+  "extends": ["airbnb-base"]
 }

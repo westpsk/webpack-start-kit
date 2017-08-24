@@ -4,15 +4,10 @@
   "description": "前端脚手架，适合多页应用开发",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
-    "build": "webpack --progress --colors --bail",
-    "dev": "webpack -w --progress --colors --config ./webpack.dev.config.js",
-    "b-watch": "browser-sync start --server --files build/css,build/js,src/views",
-    "start": "npm run dev & npm run b-watch",
-    "profile": "webpack --colors --profile --display-modules --config ./webpack.dev.config.js",
-    "pro": "webpack --progress --colors --bail NODE_ENV=production",
-    "dev-pc": "webpack -w --progress --colors --env=pc",
-    "dev-mobile": "webpack -w --progress --colors --env=mobile"
+    "build": "cross-env NODE_ENV=production webpack --progress --colors --bail --profile",
+    "dev": "webpack -w --progress --colors",
+    "b-watch": "browser-sync start --server --files build/css,build/js,tpls",
+    "start": "npm run dev & npm run b-watch"
   },
   "keywords": [
     "kit"
@@ -27,35 +22,24 @@
     "babel-plugin-transform-runtime": "^6.23.0",
     "babel-preset-es2015": "^6.24.1",
     "browser-sync": "^2.18.13",
+    "cross-env": "^5.0.5",
     "css-loader": "^0.28.5",
     "eslint": "^4.5.0",
-    "eslint-config-standard": "^10.2.1",
-    "eslint-friendly-formatter": "^3.0.0",
+    "eslint-config-airbnb": "^15.1.0",
     "eslint-loader": "^1.9.0",
-    "eslint-plugin-html": "^3.2.0",
     "eslint-plugin-import": "^2.7.0",
-    "eslint-plugin-node": "^5.1.1",
-    "eslint-plugin-promise": "^3.5.0",
-    "eslint-plugin-standard": "^3.0.1",
+    "eslint-plugin-jsx-a11y": "^6.0.2",
     "extract-text-webpack-plugin": "^3.0.0",
     "file-loader": "^0.11.2",
     "glob": "^7.1.2",
     "html-webpack-plugin": "^2.30.1",
     "node-sass": "^4.5.3",
-    "null-loader": "^0.1.1",
     "postcss-loader": "^2.0.6",
-    "postcss-smart-import": "^0.7.5",
     "precss": "^2.0.0",
     "sass-loader": "^6.0.6",
-    "smarty-loader": "0.0.1",
     "style-loader": "^0.18.2",
     "url-loader": "^0.5.9",
     "webpack": "^3.5.5",
-    "webpack-dev-server": "^2.7.1",
-    "webpack-plugin-hash-output": "^1.3.0"
-  },
-  "dependencies": {
-    "bootstrap": "^3.3.7",
-    "jquery": "^1.12.4"
+    "webpack-parallel-uglify-plugin": "^1.0.0"
   }
 }
