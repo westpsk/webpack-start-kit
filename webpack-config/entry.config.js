@@ -7,4 +7,6 @@ pageArr.forEach((page) => {
   configEntry[page] = path.resolve(dirVars.pagesDir, page + '/page.js');
 });
 
+console.log("====configEntry====");
+console.log(configEntry);
 module.exports = configEntry;

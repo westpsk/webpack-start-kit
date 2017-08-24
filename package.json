@@ -9,7 +9,10 @@
     "dev": "webpack -w --progress --colors --config ./webpack.dev.config.js",
     "b-watch": "browser-sync start --server --files build/css,build/js,src/views",
     "start": "npm run dev & npm run b-watch",
-    "profile": "webpack --colors --profile --display-modules --config ./webpack.dev.config.js"
+    "profile": "webpack --colors --profile --display-modules --config ./webpack.dev.config.js",
+    "pro": "webpack --progress --colors --bail NODE_ENV=production",
+    "dev-pc": "webpack -w --progress --colors --env=pc",
+    "dev-mobile": "webpack -w --progress --colors --env=mobile"
   },
   "keywords": [
     "kit"
